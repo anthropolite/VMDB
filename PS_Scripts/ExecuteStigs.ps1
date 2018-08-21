@@ -1,6 +1,7 @@
 ﻿# Set path to Script Files
 
-$path = "C:\users\anthr\onedrive\documents\scripts\stigs\PS Scripts"
+$path = "$env:userprofile\workspace\vmdb\PS_Scripts"
+$global:stig_path = "$env:userprofile\workspace\vmdb\STIGS"
 
 # Read properties files
 
@@ -40,11 +41,17 @@ while ($i -lt $stigids.count) {
 
     $jobname = "Batch$batch"
     start-job -name $jobname -scriptblock {
-        Param ([string[]]$stigids)
+        Param ([string[]]$stigids,
+               [string[]]$path,
+               [string[]]$global:stig_path,
+               $date)
+       
+        Import-Module "$path\functions\cklWriter.psm1"
+
         foreach ($stigid in $stigids){
-        cklwriter -stigid $stigid -date $date
+            cklwriter -stigid $stigid -date $date
         }
-    } -ArgumentList ( $stigbatch)
+    } -ArgumentList ($stigbatch,$path,$global:stig_path,$date)
 
     $batch += 1
     $i = $j + 1
@@ -56,4 +63,4 @@ while ($i -lt $stigids.count) {
 
 # Unload Modules
 
-remove-module SQL_Functions$stig
+remove-module SQL_Functions
