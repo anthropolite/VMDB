@@ -1,0 +1,17 @@
+###########################################################
+#
+#    This is a sample host.txt file
+#    The "#" character preceding the line is a comment
+#    Please list the IP address or Hostname of each machine
+#    to be reviewed followed by a "return"
+#
+###########################################################
+
+##########################
+#
+#    Examples:
+#
+#    XXX.XXX.XXX.XXX
+#    hostName
+#
+###########################

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<signatures>
+  <key id="1a470316_4943B6FB">
+    <file>security-automation-project-manager-nist.cer</file>
+    <subject>C=US, O=U.S. Government, OU=Department of Commerce, OU=National Institute of Standards and Technology, OU=Devices, CN=SECURITY AUTOMATION PROGRAM MANAGER</subject>
+    <issuer>C=US, O=Entrust, OU=Certification Authorities, OU=Entrust Managed Services SSP CA</issuer>
+    <validation_start>Jan 14 12:32:59 2015 GMT</validation_start>
+    <validation_end>Jan 14 13:02:59 2018 GMT</validation_end>
+  </key>
+<key id="99b3b749_447F9D1F"><file>entrust-managed-services-ssp-ca.cer</file><subject>C=US, O=Entrust, OU=Certification Authorities, OU=Entrust Managed Services SSP CA</subject><issuer>C=US, O=Entrust, OU=Certification Authorities, OU=Entrust Managed Services Root CA</issuer><validation_start>May  9 15:32:06 2009 GMT</validation_start><validation_end>May  9 14:02:31 2019 GMT</validation_end></key><key id="739575c9_0202"><file>entrust-managed-services-root-ca.cer</file><subject>C=US, O=Entrust, OU=Certification Authorities, OU=Entrust Managed Services Root CA</subject><issuer>C=US, O=U.S. Government, OU=FPKI, CN=Federal Common Policy CA</issuer><validation_start>Dec 15 21:12:26 2010 GMT</validation_start><validation_end>Dec 15 21:10:27 2020 GMT</validation_end></key><key id="acbb962e_0130"><file>federal-common-policy-ca.cer</file><subject>C=US, O=U.S. Government, OU=FPKI, CN=Federal Common Policy CA</subject><issuer>C=US, O=U.S. Government, OU=FPKI, CN=Federal Common Policy CA</issuer><validation_start>Dec  1 16:45:27 2010 GMT</validation_start><validation_end>Dec  1 16:45:27 2030 GMT</validation_end></key></signatures>

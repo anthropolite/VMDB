@@ -1,0 +1,88 @@
+
+ SPAWAR Systems Center Atlantic
+ SCAP Compliance Checker Release Notes                   May 22, 2018   07:40:59
+
+ SCAP Compliance Checker 5.0.1 Features Added
+ ===============================================================================
+ Type     IssueID  Summary
+ -------------------------------------------------------------------------------
+ Feature  28927    Add CLUI Output option to allow user to enable/disable SCC
+                   setting restricted permissions on SCC Logs and Results
+
+ Feature  28899    Add GUI Output option to allow user to enable/disable SCC
+                   setting restricted permissions on SCC Logs and Results
+
+ Feature  28874    SCAP 1.2 Tailoring: Add ability to view/edit existing
+                   remarks 
+
+ Feature  28872    Update DISA SCAP Content to April 2018 release
+
+ Feature  28871    SCAP 1.2 Tailoring: Add upper and lower bounds checking on
+                   data entry fields
+
+ Feature  28725    SCAP 1.2 Tailoring: Add counters for V of W groups enabled,
+                   X of Y rules Enabled, and Z number of values changed.
+
+
+
+ SCAP Compliance Checker 5.0.1 Defects Resolved
+ ===============================================================================
+ Type     IssueID  Summary
+ -------------------------------------------------------------------------------
+ Defect   28909    Update unlocker to use Benchmark ID and version to match
+                   content list in SCC 5.0.x
+
+ Defect   28905    Fix issues with content installation in the Unlocker
+
+ Defect   28889    Update SCC to properly handle network card data on Windows
+                   if all NIC's are disabled and just report the MAC address
+
+ Defect   28879    Fix data truncation issue on SCAP 1.0/1.1 Benchmark ID's
+                   that contain a dot '.' or dash
+
+ Defect   28875    Update scan and prose reports to include digital signature
+                   section 
+
+ Defect   28870    Fix issues with HPUX ndd tests with ipv6
+
+ Defect   28860    Add option to turn off restricted report/log permission
+                   setting 
+
+ Defect   28853    Fix issues with running Cisco IOS content via GUI
+
+ Defect   28850    Fix Windows SID / User account translation when a domain
+                   account (member of a local group) and local account have
+                   same name
+
+ Defect   28848    Update SCC to include mount points for remote mounts in the
+                   results for the UNIX OVAL partition test.
+
+ Defect   28842    Update windows file test to gather ms_checksum on more files
+                   than just executables
+
+ Defect   28841    Fix issues with Deviations not being enabled/applied
+                   properly
+
+ Defect   28837    IUSR Account on IIS servers is not being found windows
+                   probes that utilize Windows SID functionality
+
+ Defect   28836    Probe_SID Does not handle object operation of pattern match
+                   on trustee_name as expected (not all values found)
+
+ Defect   28830    Fix file searching on Windows to prevent it from scanning
+                   the parent of the desired directory instead of what was
+                   specified
+
+ Defect   28826    Update setting of Windows file permissions on SCC results to
+                   be domain specific, not just based on username
+
+ Defect   28786    Fix issue with results differing when running two different
+                   versions of the same RHEL6 STIG content in the same SCC scan
+                   session 
+
+ Defect   28779    Update Windows fileeffectiverights53 to include CREATOR
+                   OWNER SID
+
+ Defect   28776    Update Windows regkeyeffectiverights53 to include CREATOR
+                   OWNER SID
+

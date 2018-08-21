@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--====================================-->
+<!-- SCC Options File Schema Definition -->
+<!--====================================-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <!--===============-->
+  <!-- Complex Types -->
+  <!--===============-->
+  <!-- Options Root Element -->
+  <xs:element name="options">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="version"/>
+        <xs:element ref="timeStamp"/>
+        <xs:element ref="reviewType"/>
+        <xs:element ref="hostName"/>
+        <xs:element ref="frequency"/>
+        <xs:element ref="schedule"/>
+        <xs:element ref="timeout"/>
+        <xs:element ref="username"/>
+        <xs:element ref="sshUserPassword"/>
+        <xs:element ref="sshKeyPassphrase"/>
+        <xs:element ref="sshEnabled"/>
+        <xs:element ref="sshServer"/>
+        <xs:element ref="sshPortNumber"/>
+        <xs:element ref="sshServerDirectory"/>
+        <xs:element ref="sshConnectionType"/>
+        <xs:element ref="rsaKey"/>
+        <xs:element ref="sshPrivateKey"/>
+        <xs:element ref="hostFile"/>
+        <xs:element ref="offlineConfigPath"/>
+        <xs:element ref="ipRangeTo"/>
+        <xs:element ref="ipRangeFrom"/>
+        <xs:element ref="domainName"/>
+        <xs:element ref="createNewHostFile"/>
+        <xs:element ref="scapScan"/>
+        <xs:element ref="ovalScan"/>
+        <xs:element ref="ocilScan"/>
+        <xs:element ref="allSettingsHTMLReport"/>
+        <xs:element ref="allSettingsTextReport"/>
+        <xs:element ref="nonComplianceHTMLReport"/>
+        <xs:element ref="nonComplianceTextReport"/>
+        <xs:element ref="allSettingsSummaryHTMLReport"/>
+        <xs:element ref="allSettingsSummaryTextReport"/>
+        <xs:element ref="nonComplianceSummaryHTMLReport"/>
+        <xs:element ref="nonComplianceSummaryTextReport"/>
+        <xs:element ref="allSettingsHTMLReportDetailSummary"/>
+        <xs:element ref="allSettingsTextReportDetailSummary"/>
+        <xs:element ref="nonComplianceHTMLReportDetailSummary"/>
+        <xs:element ref="nonComplianceTextReportDetailSummary"/>
+        <xs:element ref="allSettingsSummaryHTMLReportDetailSummary"/>
+        <xs:element ref="allSettingsSummaryTextReportDetailSummary"/>
+        <xs:element ref="nonComplianceSummaryHTMLReportDetailSummary"/>
+        <xs:element ref="nonComplianceSummaryTextReportDetailSummary"/>
+        <xs:element ref="arfXmlOutputDetailSummary"/>
+        <xs:element ref="keepScreenLogs"/>
+        <xs:element ref="generateDODARFXML"/>
+        <xs:element ref="keepXCCDFXML"/>
+        <xs:element ref="keepOVALXML"/>
+        <xs:element ref="keepOCILXML"/>
+        <xs:element ref="keepARFXML"/>
+        <xs:element ref="keepCPEXML"/>
+        <xs:element ref="validateXMLResults"/>
+        <xs:element ref="zipOVALXML"/>
+        <xs:element ref="validateContent"/>
+        <xs:element ref="validateDigitalSignature"/>
+        <xs:element ref="failOnXMLDSig"/>
+        <xs:element ref="smartPreferences"/>
+        <xs:element ref="ignoreRemoteFileSystems"/>
+        <xs:element ref="userDataDirectory"/>
+        <xs:element ref="userDataDirectoryValue"/>
+        <xs:element ref="summarySourceDirectory"/>
+        <xs:element ref="summaryDestinationDirectory"/>
+        <xs:element ref="openSummaryDestinationDirectory"/>
+        <xs:element ref="detailSummarySourceDirectory"/>
+        <xs:element ref="detailSummaryDestinationDirectory"/>
+        <xs:element ref="openDetailSummaryDestinationDirectory"/>
+        <xs:element ref="detailSummaryOVALSourceDirectory"/>
+        <xs:element ref="detailSummaryOVALDestinationDirectory"/>
+        <xs:element ref="openDetailSummaryOVALDestinationDirectory"/>
+        <xs:element ref="computerListHistoricalHTMLReport"/>
+        <xs:element ref="computerListHistoricalExcelReport"/>
+        <xs:element ref="computerListHTMLReport"/>
+        <xs:element ref="computerListExcelReport"/>
+        <xs:element ref="siteSummaryHTMLReport"/>
+        <xs:element ref="siteSummaryNonComplianceHTMLReport"/>
+        <xs:element ref="siteSummaryExcelReport"/>
+        <xs:element ref="siteSummaryNonComplianceExcelReport"/>
+        <xs:element ref="deviationsEnabled"/>
+        <xs:element ref="deviationsProfile"/>
+        <xs:element ref="thresholdsEnabled"/>
+        <xs:element ref="thresholdsProfile"/>
+        <xs:element ref="thresholdsUnlockCode"/>
+        <xs:element ref="maximumRecentReports"/>
+        <xs:element ref="runSingleDefinition"/>
+        <xs:element ref="runSingleID"/>
+        <xs:element ref="debugEnabled"/>
+        <xs:element ref="sessionEnabled"/>
+        <xs:element ref="applicableCPEContent"/>
+        <xs:element ref="patchContentAgeWarning"/>
+        <xs:element ref="maxLogFileSize"/>
+        <xs:element ref="patchFileModifiedThreshold"/>
+        <xs:element ref="useInternet"/>
+        <xs:element ref="useIntranet"/>
+        <xs:element ref="freeSpaceThreshold"/>
+        <xs:element ref="intranetURLone"/>
+        <xs:element ref="intranetURLtwo"/>
+        <xs:element ref="ovalFileModifiedThresholdOC"/>
+        <xs:element ref="useInternetOC"/>
+        <xs:element ref="useIntranetOC"/>
+        <xs:element ref="intranetURLoneOC"/>
+        <xs:element ref="intranetURLtwoOC"/>
+        <xs:element ref="internetURLoneOC"/>
+        <xs:element ref="internetURLtwoOC"/>
+        <xs:element ref="expignore"/>
+        <xs:element ref="cyberscopeReport"/>
+        <xs:element ref="cyberscopeOrgEmail"/>
+        <xs:element ref="cyberscopeOrgName"/>
+        <xs:element ref="cyberscopeDepartment"/>
+        <xs:element ref="cyberscopeEnclave"/>
+        <xs:element ref="cyberscopeOrgPhone"/>
+        <xs:element ref="cyberscopeOrgURL"/>
+        <xs:element ref="cyberscopeSummaryId"/>
+        <xs:element ref="cyberscopeSummaryVersion"/>
+        <xs:element ref="xccdfFileAgeWarning"/>
+        <xs:element ref="xccdfFileAgeAction"/>
+        <xs:element ref="suppressCceErrors"/>
+        <xs:element ref="fileRecurseLimit"/>
+        <xs:element ref="transformThreshold"/>
+        <xs:element ref="validationThreshold"/>
+        <xs:element ref="xmllintOverridePath"/>
+        <xs:element ref="htmlReportTransfer"/>
+        <xs:element ref="xmlReportTransfer"/>
+        <xs:element ref="textReportTransfer"/>
+        <xs:element ref="randomizeSSHTransfer"/>
+        <xs:element ref="randomizeValue"/>
+        <xs:element ref="deleteOnTransferReports"/>
+        <xs:element ref="deleteonTransferLogs"/>
+        <xs:element ref="debugLogTransfer"/>
+        <xs:element ref="errorLogTransfer"/>
+        <xs:element ref="lastServiceScan"/>
+        <xs:element ref="nextServiceScan"/>
+        <xs:element ref="ignoreCase"/>
+        <xs:element ref="onlyCollectSecurityPrinciplesThatHavePrivilegesAssigned"/>
+        <xs:element ref="maskPasswords"/>
+        <xs:element ref="ignoreFileExtendedACL"/>
+        <xs:element ref="itemCreationThresholdEnabled"/>
+        <xs:element ref="itemCreationThreshold"/>
+        <xs:element ref="suppress_warnings"/>
+        <xs:element ref="dirTargetNameEnabled"/>
+        <xs:element ref="dirStreamNameEnabled"/>
+        <xs:element ref="dirContentVersionEnabled"/>
+        <xs:element ref="dirTimestampEnabled"/>
+        <xs:element ref="fileTargetNameEnabled"/>
+        <xs:element ref="fileSCCVersionEnabled"/>
+        <xs:element ref="fileTimestampEnabled"/>
+        <xs:element ref="externalCmdTimeout"/>
+        <xs:element ref="scap12DBFilepath"/>
+        <xs:element ref="form_main_x"/>
+        <xs:element ref="form_main_y"/>
+        <xs:element ref="form_main_width"/>
+        <xs:element ref="form_main_height"/>
+        <xs:element ref="form_main_state"/>
+        <xs:element ref="recentReport" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="contents"/>
+        <xs:element ref="ovalContents"/>
+        <xs:element ref="ocilContents"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <!-- List of Installed SCAP Content Streams -->
+  <xs:element name="contents">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="content" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <!-- Installed SCAP Content Stream -->
+  <xs:element name="content">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="stream"/>
+        <xs:choice>
+          <!-- SCAP v.1.0/1.1 Content Stream Properties -->
+          <xs:sequence>
+            <xs:element ref="selectedProfile"/>
+            <xs:element ref="profiles"/>
+            <xs:element ref="lastModifiedXCCDF"/>
+            <xs:element ref="lastModifiedOVAL"/>
+            <xs:element ref="certificates"/>
+			<xs:choice>
+              <!-- SCAP with OVAL Patches Content -->
+              <xs:sequence>
+                <xs:element ref="lastModifiedPatches"/>
+                <xs:element ref="lastModifiedCPEOVAL"/>
+                <xs:element ref="lastModifiedCPEDictionary"/>
+                <xs:element ref="installDate"/>
+                <xs:element ref="version"/>
+                <xs:element ref="ovalVersion"/>
+                <xs:element ref="xccdf"/>
+                <xs:element ref="oval"/>
+                <xs:element ref="date"/>
+                <xs:element ref="patchModifiedDate"/>
+              </xs:sequence>
+              <!-- No OVAL Patches Content -->
+              <xs:sequence>
+                <xs:element ref="lastModifiedCPEOVAL"/>
+                <xs:element ref="lastModifiedCPEDictionary"/>
+                <xs:element ref="installDate"/>
+                <xs:element ref="version"/>
+                <xs:element ref="ovalVersion"/>
+                <xs:element ref="xccdf"/>
+                <xs:element ref="oval"/>
+                <xs:element ref="date"/>
+              </xs:sequence>
+            </xs:choice>
+          </xs:sequence>
+          <!-- SCAP v.1.2 Content Stream Properties -->
+          <xs:sequence>
+            <xs:element ref="filepath"/>
+            <xs:element ref="selectedProfile"/>
+            <xs:element ref="profiles"/>
+            <xs:element ref="lastModifiedSCAP12"/>
+            <xs:element ref="installDate"/>
+            <xs:element ref="version"/>
+            <xs:element ref="ovalVersion"/>
+            <xs:element ref="xccdf"/>
+            <xs:element ref="oval"/>
+            <xs:element ref="date"/>
+			<xs:element ref="certificates"/>
+          </xs:sequence>
+        </xs:choice>
+        <xs:element ref="xmlSchemaValidationDate"/>
+        <xs:element ref="xmlSchemaValidationResult"/>
+        <xs:element ref="xmldsigValidationDate"/>
+        <xs:element ref="xmldsigStatus"/>
+        <xs:element ref="enabled"/>
+        <xs:element ref="review"/>
+        <xs:element ref="resume"/>
+        <xs:element ref="resumeFile"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>  
+  <!-- List of SCAP Stream Profiles -->
+  <xs:element name="profiles">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="profile" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="certificates">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="certificate" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <!-- List of Installed OVAL Content Streams -->
+  <xs:element name="ovalContents">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ovalContent" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <!-- Installted OVAL Content Stream -->
+  <xs:element name="ovalContent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="fileName"/>
+        <xs:element ref="lastModified"/>
+        <xs:element ref="ovalVersion"/>
+        <xs:element ref="oval"/>
+        <xs:element ref="date"/>
+        <xs:element ref="xmlSchemaValidationDate"/>
+        <xs:element ref="xmlSchemaValidationResult"/>
+        <xs:element ref="xmldsigValidationDate"/>
+        <xs:element ref="xmldsigStatus"/>
+        <xs:element ref="certificates"/>
+        <xs:element ref="enabled"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <!-- List of Installed OCIL Content Steams -->
+  <xs:element name="ocilContents">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ocilContent" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <!-- Installed OCIL Content Stream -->
+  <xs:element name="ocilContent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="fileName"/>
+        <xs:element ref="lastModified"/>
+        <xs:element ref="ocilVersion"/>
+        <xs:element ref="ocil"/>
+        <xs:element ref="date"/>
+        <xs:element ref="xmlSchemaValidationDate"/>
+        <xs:element ref="xmlSchemaValidationResult"/>
+        <xs:element ref="xmldsigValidationDate"/>
+        <xs:element ref="enabled"/>
+        <xs:element ref="review"/>
+        <xs:element ref="xmldsigStatus"/>
+        <xs:element ref="resume"/>
+        <xs:element ref="resumeFile"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <!--===============-->
+  <!-- Element Types -->
+  <!--===============-->
+  <xs:element name="version" type="xs:string"/>
+  <xs:element name="timeStamp" type="xs:dateTime"/>
+  <xs:element name="reviewType" type="xs:string"/>
+  <xs:element name="hostName" type="xs:string"/>
+  <xs:element name="frequency" type="xs:nonNegativeInteger"/>
+  <xs:element name="schedule" type="xs:nonNegativeInteger"/>
+  <xs:element name="timeout" type="xs:nonNegativeInteger"/>
+  <xs:element name="username" type="xs:string"/>
+  <xs:element name="sshUserPassword" type="xs:string"/>
+  <xs:element name="sshKeyPassphrase" type="xs:string"/>
+  <xs:element name="sshEnabled" type="xs:boolean"/>
+  <xs:element name="sshServer" type="xs:string"/>
+  <xs:element name="sshPortNumber" type="xs:nonNegativeInteger"/>
+  <xs:element name="sshServerDirectory" type="xs:string"/>
+  <xs:element name="sshConnectionType" type="xs:nonNegativeInteger"/>
+  <xs:element name="rsaKey" type="xs:string"/>
+  <xs:element name="sshPrivateKey" type="xs:string"/>
+  <xs:element name="hostFile" type="xs:string"/>
+  <xs:element name="offlineConfigPath" type="xs:string"/>
+  <xs:element name="ipRangeTo" type="xs:string"/>
+  <xs:element name="ipRangeFrom" type="xs:string"/>
+  <xs:element name="domainName" type="xs:string"/>
+  <xs:element name="createNewHostFile" type="xs:boolean"/>
+  <xs:element name="scapScan" type="xs:boolean"/>
+  <xs:element name="ovalScan" type="xs:boolean"/>
+  <xs:element name="ocilScan" type="xs:boolean"/>
+  <xs:element name="allSettingsHTMLReport" type="xs:boolean"/>
+  <xs:element name="allSettingsTextReport" type="xs:boolean"/>
+  <xs:element name="nonComplianceHTMLReport" type="xs:boolean"/>
+  <xs:element name="nonComplianceTextReport" type="xs:boolean"/>
+  <xs:element name="allSettingsSummaryHTMLReport" type="xs:boolean"/>
+  <xs:element name="allSettingsSummaryTextReport" type="xs:boolean"/>
+  <xs:element name="nonComplianceSummaryHTMLReport" type="xs:boolean"/>
+  <xs:element name="nonComplianceSummaryTextReport" type="xs:boolean"/>
+  <xs:element name="allSettingsHTMLReportDetailSummary" type="xs:boolean"/>
+  <xs:element name="allSettingsTextReportDetailSummary" type="xs:boolean"/>
+  <xs:element name="nonComplianceHTMLReportDetailSummary" type="xs:boolean"/>
+  <xs:element name="nonComplianceTextReportDetailSummary" type="xs:boolean"/>
+  <xs:element name="allSettingsSummaryHTMLReportDetailSummary" type="xs:boolean"/>
+  <xs:element name="allSettingsSummaryTextReportDetailSummary" type="xs:boolean"/>
+  <xs:element name="nonComplianceSummaryHTMLReportDetailSummary" type="xs:boolean"/>
+  <xs:element name="nonComplianceSummaryTextReportDetailSummary" type="xs:boolean"/>
+  <xs:element name="arfXmlOutputDetailSummary" type="xs:boolean"/>
+  <xs:element name="keepScreenLogs" type="xs:boolean"/>
+  <xs:element name="generateDODARFXML" type="xs:boolean"/>
+  <xs:element name="keepXCCDFXML" type="xs:boolean"/>
+  <xs:element name="keepOVALXML" type="xs:boolean"/>
+  <xs:element name="keepOCILXML" type="xs:boolean"/>
+  <xs:element name="keepARFXML" type="xs:boolean"/>
+  <xs:element name="keepCPEXML" type="xs:boolean"/>
+  <xs:element name="validateXMLResults" type="xs:boolean"/>
+  <xs:element name="zipOVALXML" type="xs:boolean"/>
+  <xs:element name="validateContent" type="xs:boolean"/>
+  <xs:element name="validateDigitalSignature" type="xs:boolean"/>
+  <xs:element name="failOnXMLDSig" type="xs:boolean"/>
+  <xs:element name="smartPreferences" type="xs:boolean"/>
+  <xs:element name="ignoreRemoteFileSystems" type="xs:boolean"/>
+  <xs:element name="userDataDirectory" type="xs:string"/>
+  <xs:element name="userDataDirectoryValue" type="xs:nonNegativeInteger"/>
+  <xs:element name="summarySourceDirectory" type="xs:string"/>
+  <xs:element name="summaryDestinationDirectory" type="xs:string"/>
+  <xs:element name="openSummaryDestinationDirectory" type="xs:boolean"/>
+  <xs:element name="detailSummarySourceDirectory" type="xs:string"/>
+  <xs:element name="detailSummaryDestinationDirectory" type="xs:string"/>
+  <xs:element name="openDetailSummaryDestinationDirectory" type="xs:boolean"/>
+  <xs:element name="detailSummaryOVALSourceDirectory" type="xs:string"/>
+  <xs:element name="detailSummaryOVALDestinationDirectory" type="xs:string"/>
+  <xs:element name="openDetailSummaryOVALDestinationDirectory" type="xs:boolean"/>
+  <xs:element name="computerListHistoricalHTMLReport" type="xs:boolean"/>
+  <xs:element name="computerListHistoricalExcelReport" type="xs:boolean"/>
+  <xs:element name="computerListHTMLReport" type="xs:boolean"/>
+  <xs:element name="computerListExcelReport" type="xs:boolean"/>
+  <xs:element name="siteSummaryHTMLReport" type="xs:boolean"/>
+  <xs:element name="siteSummaryNonComplianceHTMLReport" type="xs:boolean"/>
+  <xs:element name="siteSummaryExcelReport" type="xs:boolean"/>
+  <xs:element name="siteSummaryNonComplianceExcelReport" type="xs:boolean"/>
+  <xs:element name="deviationsEnabled" type="xs:boolean"/>
+  <xs:element name="deviationsProfile" type="xs:string"/>
+  <xs:element name="thresholdsEnabled" type="xs:boolean"/>
+  <xs:element name="thresholdsProfile" type="xs:string"/>
+  <xs:element name="thresholdsUnlockCode" type="xs:string"/>
+  <xs:element name="maximumRecentReports" type="xs:nonNegativeInteger"/>
+  <xs:element name="runSingleDefinition" type="xs:boolean"/>
+  <xs:element name="runSingleID" type="xs:boolean"/>
+  <xs:element name="debugEnabled" type="xs:boolean"/>
+  <xs:element name="sessionEnabled" type="xs:boolean"/>
+  <xs:element name="applicableCPEContent" type="xs:boolean"/>
+  <xs:element name="patchContentAgeWarning" type="xs:nonNegativeInteger"/>
+  <xs:element name="maxLogFileSize" type="xs:nonNegativeInteger"/>
+  <xs:element name="patchFileModifiedThreshold" type="xs:nonNegativeInteger"/>
+  <xs:element name="useInternet" type="xs:boolean"/>
+  <xs:element name="useIntranet" type="xs:boolean"/>
+  <xs:element name="freeSpaceThreshold" type="xs:nonNegativeInteger"/>
+  <xs:element name="intranetURLone" type="xs:string"/>
+  <xs:element name="intranetURLtwo" type="xs:string"/>
+  <xs:element name="ovalFileModifiedThresholdOC" type="xs:nonNegativeInteger"/>
+  <xs:element name="useInternetOC" type="xs:boolean"/>
+  <xs:element name="useIntranetOC" type="xs:boolean"/>
+  <xs:element name="intranetURLoneOC" type="xs:string"/>
+  <xs:element name="intranetURLtwoOC" type="xs:string"/>
+  <xs:element name="internetURLoneOC" type="xs:string"/>
+  <xs:element name="internetURLtwoOC" type="xs:string"/>
+  <xs:element name="expignore" type="xs:boolean"/>
+  <xs:element name="cyberscopeReport" type="nillableBoolean"/>
+  <xs:element name="cyberscopeOrgEmail" type="xs:string"/>
+  <xs:element name="cyberscopeOrgName" type="xs:string"/>
+  <xs:element name="cyberscopeDepartment" type="xs:string"/>
+  <xs:element name="cyberscopeEnclave" type="xs:string"/>
+  <xs:element name="cyberscopeOrgPhone" type="xs:string"/>
+  <xs:element name="cyberscopeOrgURL" type="xs:string"/>
+  <xs:element name="cyberscopeSummaryId" type="xs:string"/>
+  <xs:element name="cyberscopeSummaryVersion" type="xs:string"/>
+  <xs:element name="xccdfFileAgeWarning" type="xs:nonNegativeInteger"/>
+  <xs:element name="xccdfFileAgeAction" type="xs:string"/>
+  <xs:element name="suppressCceErrors" type="nillableBoolean"/>
+  <xs:element name="fileRecurseLimit" type="xs:integer"/>
+  <xs:element name="transformThreshold" type="xs:nonNegativeInteger"/>
+  <xs:element name="validationThreshold" type="xs:nonNegativeInteger"/>
+  <xs:element name="xmllintOverridePath" type="xs:string"/>
+  <xs:element name="htmlReportTransfer" type="xs:boolean"/>
+  <xs:element name="xmlReportTransfer" type="xs:boolean"/>
+  <xs:element name="textReportTransfer" type="xs:boolean"/>
+  <xs:element name="randomizeSSHTransfer" type="xs:boolean"/>
+  <xs:element name="randomizeValue" type="xs:boolean"/>
+  <xs:element name="deleteOnTransferReports" type="xs:boolean"/>
+  <xs:element name="deleteonTransferLogs" type="xs:boolean"/>
+  <xs:element name="debugLogTransfer" type="xs:boolean"/>
+  <xs:element name="errorLogTransfer" type="xs:boolean"/>
+  <xs:element name="lastServiceScan" type="xs:boolean"/>
+  <xs:element name="nextServiceScan" type="xs:boolean"/>
+  <xs:element name="ignoreCase" type="xs:boolean"/>
+  <xs:element name="onlyCollectSecurityPrinciplesThatHavePrivilegesAssigned" type="xs:boolean"/>
+  <xs:element name="maskPasswords" type="xs:boolean"/>
+  <xs:element name="ignoreFileExtendedACL" type="xs:boolean"/>
+  <xs:element name="itemCreationThresholdEnabled" type="xs:boolean"/>
+  <xs:element name="itemCreationThreshold" type="xs:nonNegativeInteger"/>
+  <xs:element name="suppress_warnings" type="xs:boolean"/>
+  <xs:element name="dirTargetNameEnabled" type="xs:boolean"/>
+  <xs:element name="dirStreamNameEnabled" type="xs:boolean"/>
+  <xs:element name="dirContentVersionEnabled" type="xs:boolean"/>
+  <xs:element name="dirTimestampEnabled" type="xs:boolean"/>
+  <xs:element name="fileTargetNameEnabled" type="xs:boolean"/>
+  <xs:element name="fileSCCVersionEnabled" type="xs:boolean"/>
+  <xs:element name="fileTimestampEnabled" type="xs:boolean"/>
+  <xs:element name="externalCmdTimeout" type="xs:nonNegativeInteger"/>
+  <xs:element name="scap12DBFilepath" type="xs:string"/>
+  <xs:element name="form_main_x" type="xs:nonNegativeInteger"/>
+  <xs:element name="form_main_y" type="xs:nonNegativeInteger"/>
+  <xs:element name="form_main_width" type="xs:nonNegativeInteger"/>
+  <xs:element name="form_main_height" type="xs:nonNegativeInteger"/>
+  <xs:element name="form_main_state" type="xs:string"/>
+  <xs:element name="recentReport" type="xs:string"/>  
+  <xs:element name="stream" type="xs:string"/>
+  <xs:element name="filepath" type="xs:string"/>
+  <xs:element name="selectedProfile" type="xs:string"/>  
+  <xs:element name="profile" type="xs:string"/>
+  <xs:element name="lastModifiedXCCDF" type="xs:nonNegativeInteger"/>
+  <xs:element name="lastModifiedOVAL" type="xs:nonNegativeInteger"/>
+  <xs:element name="lastModifiedPatches" type="xs:nonNegativeInteger"/>
+  <xs:element name="lastModifiedCPEOVAL" type="xs:nonNegativeInteger"/>
+  <xs:element name="lastModifiedCPEDictionary" type="xs:nonNegativeInteger"/>
+  <xs:element name="lastModifiedSCAP12" type="xs:nonNegativeInteger"/>
+  <xs:element name="installDate" type="xs:string"/>
+  <xs:element name="xccdf" type="xs:string"/>
+  <xs:element name="patchModifiedDate" type="xs:date"/>
+  <xs:element name="ovalVersion" type="xs:string"/>
+  <xs:element name="oval" type="xs:string"/>
+  <xs:element name="fileName" type="xs:string"/>
+  <xs:element name="lastModified" type="xs:nonNegativeInteger"/>
+  <xs:element name="ocilVersion" type="xs:string"/>
+  <xs:element name="ocil" type="xs:string"/>
+  <xs:element name="date" type="xs:date"/>
+  <xs:element name="xmlSchemaValidationDate" type="xs:nonNegativeInteger"/>
+  <xs:element name="xmlSchemaValidationResult" type="nillableBoolean"/>
+  <xs:element name="xmldsigValidationDate" type="xs:nonNegativeInteger"/>
+  <xs:element name="xmldsigStatus" type="nillableBoolean"/>
+  <xs:element name="certificate" type="xs:string"/>
+  <xs:element name="enabled" type="xs:boolean"/>
+  <xs:element name="review" type="xs:boolean"/>
+  <xs:element name="resume" type="xs:boolean"/>
+  <xs:element name="resumeFile" type="xs:string"/>
+  <!--==============-->
+  <!-- Simple Types -->
+  <!--==============-->
+  <xs:simpleType name="nillableBoolean">
+    <xs:union memberTypes="xs:string emptyString"/>
+  </xs:simpleType>
+  <xs:simpleType name="nillableNonNegativeInteger">
+    <xs:union memberTypes="xs:nonNegativeInteger emptyString"/>
+  </xs:simpleType>
+  <xs:simpleType name="nillableInteger">
+    <xs:union memberTypes="xs:integer emptyString"/>
+  </xs:simpleType>
+  <xs:simpleType name="nillableDate">
+    <xs:union memberTypes="xs:date emptyString"/>
+  </xs:simpleType>
+  <xs:simpleType name="nillableDateTime">
+    <xs:union memberTypes="xs:dateTime emptyString"/>
+  </xs:simpleType>
+  <xs:simpleType name="emptyString">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value=""/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

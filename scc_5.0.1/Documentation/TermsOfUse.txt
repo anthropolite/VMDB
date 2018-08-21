@@ -1,0 +1,11 @@
+Any usage or distribution of this software outside of the U.S. Federal Government shall be reviewed by the agency distributing the software to ensure the distribution complies with the government purpose rights listed below, and is in the best interest of the U.S. Federal Government.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+The U.S. Federal Government has at least "government purpose rights" for this computer software under DFARS 252.227-7014.  This computer software is to be used only for a "government purpose" as generally defined in DFARS 252.227-7014, and specifically defined below.
+
+The U.S Federal Government's rights to use, modify, reproduce, release, perform, display, or disclose this software are restricted by paragraph (b)(2) of the Rights in Noncommercial Computer Software and Noncommercial Computer Software Documentation.  Any reproduction of the software or portions thereof marked with this legend must also reproduce the markings.
+
+This software is designed to review computer security settings and can be installed on any U.S. Federal Government computer or any computer that is mandated to comply with U.S. Federal Government security regulations such as OMB M-08-22, FISMA, HIPAA, NIST FDCC, NIST USGCB, DISA STIGs and IRS.
+
+The U.S Federal Government purpose in distributing this software is to increase computer security and awareness for U.S entities interfacing with the U.S Federal Government.
