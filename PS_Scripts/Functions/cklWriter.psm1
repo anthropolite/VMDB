@@ -1,4 +1,4 @@
-﻿<function xmlwriter {
+﻿function cklwriter {
     Param (
         $stigid,
         $date,
@@ -20,7 +20,7 @@
     #set output file
 
     $cklname = "$stigoutput\$env:computername.$Stigid.$env:username.$date.ckl"
-    
+
     #start writing CKL
 
     $Encoding = New-Object System.Text.UTF8Encoding $False
