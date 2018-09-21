@@ -58,7 +58,7 @@
       <!-- *********** Output Options ***************** -->
       <sharedOptions>1</sharedOptions>
       <userDataDirectory>C:\Users\anthr\SCC</userDataDirectory>
-      <userDataDirectoryValue>2</userDataDirectoryValue>
+      <userDataDirectoryValue>4</userDataDirectoryValue>
       <setRestrictedPermissions>1</setRestrictedPermissions>
       <!-- *********** Output Subdirectory Options ***************** -->
       <dirResultsLogsEnabled>1</dirResultsLogsEnabled>
@@ -164,7 +164,7 @@
       <internetURLtwoOC></internetURLtwoOC>
       <!-- *********** Internal Options - Do Not Edit ***************** -->
       <version>5.0.1</version>
-      <timeStamp>2018-06-29T00:04:48</timeStamp>
+      <timeStamp>2018-09-20T22:15:49</timeStamp>
       <expignore>0</expignore>
       <domainName></domainName>
       <createNewHostFile>0</createNewHostFile>
