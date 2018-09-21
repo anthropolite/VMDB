@@ -1,13 +1,13 @@
 ﻿# Set path to Script Files
 
-$path = "$env:userprofile\workspace\vmdb\PS_Scripts"
-$global:stig_path = "$env:userprofile\workspace\vmdb\STIGS"
+$global:path = Split-Path -Path $MyInvocation.MyCommand.Definition -Parent
+$global:stig_path = "$path\..\STIGS"
 
 # Read properties files
 
 Get-Content "$path\properties.txt" | 
     ForEach-Object { $var = $_.split('=') 
-                     New-Variable -name $var[0] -scope global -Value $var[1]}                                 
+        New-Variable -name $var[0] -scope global -Value $var[1]}                                 
 
 #Load function Files
 
@@ -60,6 +60,16 @@ while ($i -lt $stigids.count) {
     if ($i -gt $stigids.count) {$i=$stigids.count}
     if ($j -gt $stigids.count) {$j=$stigids.count}
 }
+
+# Execute SCAP
+
+& $path\..\scc_5.0.1\cscc.exe -u "$path\..\scc_5.0.1\output"
+
+# remove variables
+
+Get-Content "$path\properties.txt" | 
+    ForEach-Object { $var = $_.split('=') 
+        remove-Variable -name $var[0] -scope global}
 
 # Unload Modules
 

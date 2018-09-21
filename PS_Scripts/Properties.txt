@@ -2,5 +2,3 @@ sqlsvr=DESKTOP-VIITAHR
 sqlinst=IA
 CommonDB=Common_Items
 SiteDB=C2
-Stig_Path=C:\users\anthr\onedrive\documents\scripts\stigs\stigs
-SCC_Path=C:\users\anthr\onedrive\documents\scripts\scc_5.0.1
