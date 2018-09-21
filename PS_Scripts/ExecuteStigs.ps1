@@ -63,7 +63,14 @@ while ($i -lt $stigids.count) {
 
 # Execute SCAP
 
-& $path\..\scc_5.0.1\cscc.exe -u "$path\..\scc_5.0.1\output"
+start-job -name SCC -scriptblock {
+    param ([string[]]$path)
+
+    & $path\..\scc_5.0.1\cscc.exe } -ArgumentList ($path)
+
+# merge SCAP with CKLS
+
+TransferScap
 
 # remove variables
 
