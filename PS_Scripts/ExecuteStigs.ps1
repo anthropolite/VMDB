@@ -68,9 +68,40 @@ start-job -name SCC -scriptblock {
 
     & $path\..\scc_5.0.1\cscc.exe } -ArgumentList ($path)
 
-# merge SCAP with CKLS
+# merge SCAP with CKLS in Parallel
 
-TransferScap
+$xccdfs=Get-ChildItem "$env:userprofile\scc" -filter *XCCDF*.xml -recurse
+$ckls=Get-ChildItem "$env:USERPROFILE\desktop\Checklists_$date" 
+
+$cklsperbatch = 2
+
+$i=0
+$j=$cklsperbatch-1
+$batch=1
+
+while ($i -lt $ckls.count) {
+    $cklsbatch = $ckls[$i..$j]
+
+    $jobname = "Scap-Batch$batch"
+    start-job -name $jobname -scriptblock {
+        Param ([object[]]$cklsbatch,
+               [object[]]$xccdfs
+               )
+       
+        Import-Module "$path\functions\transferscap.psm1"
+
+        foreach ($cklobj in $cklsbatch){
+            transferscap -cklobj $cklobj -xccdfs $xccdfs
+        }
+    } -ArgumentList ($cklsbatch,$xccdfs)
+
+    $batch += 1
+    $i = $j + 1
+    $j += $cklsperbatch
+
+    if ($i -gt $ckls.count) {$i=$ckls.count}
+    if ($j -gt $ckls.count) {$j=$ckls.count}
+}
 
 # remove variables
 
