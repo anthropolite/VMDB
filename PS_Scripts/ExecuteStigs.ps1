@@ -63,10 +63,13 @@ while ($i -lt $stigids.count) {
 
 # Execute SCAP
 
-start-job -name SCC -scriptblock {
-    param ([string[]]$path)
+#start-job -name SCC -scriptblock {
+#    param ([string[]]$path)
 
-    & $path\..\scc_5.0.1\cscc.exe } -ArgumentList ($path)
+#    & $path\..\scc_5.0.1\cscc.exe } -ArgumentList ($path)
+
+$scc = Start-Process $path\..\scc_5.0.1\cscc.exe -wait -PassThru -verb runas 
+$scc.WaitForExit()
 
 # merge SCAP with CKLS in Parallel
 
@@ -85,7 +88,8 @@ while ($i -lt $ckls.count) {
     $jobname = "Scap-Batch$batch"
     start-job -name $jobname -scriptblock {
         Param ([object[]]$cklsbatch,
-               [object[]]$xccdfs
+               [object[]]$xccdfs,
+               [string[]]$path
                )
        
         Import-Module "$path\functions\transferscap.psm1"
@@ -93,7 +97,7 @@ while ($i -lt $ckls.count) {
         foreach ($cklobj in $cklsbatch){
             transferscap -cklobj $cklobj -xccdfs $xccdfs
         }
-    } -ArgumentList ($cklsbatch,$xccdfs)
+    } -ArgumentList ($cklsbatch,$xccdfs,$path)
 
     $batch += 1
     $i = $j + 1
