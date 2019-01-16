@@ -20,6 +20,9 @@ $commonsqlParams="-ServerInstance $sqlsvr\$sqlinst -Database $commondb"
 $stigs = Get-ChildItem -path $global:stig_path
 
 foreach ($stig in $stigs) {
+    
+    write-host ""
+    write-host "processing $filename"
 
     $stg=[xml](Get-Content -path $stig.FullName)
 
@@ -30,7 +33,7 @@ foreach ($stig in $stigs) {
     $filename=$stig.Name
     $releaseinfo=$stg.Benchmark.'plain-text'.'#text'
     $title=$stg.Benchmark.title
-    $stigid=$ckl.Benchmark.id
+    $stigid=$stg.Benchmark.id
     $desc=$stg.Benchmark.description
 
     #Get list of STIIGS for this host
@@ -38,6 +41,7 @@ foreach ($stig in $stigs) {
     write-host "filename length is $($filename.length)"
     write-host "releaseinfo length is $($releaseinfo.length)"
     write-host "title length is $($title.length)"
+    write-host "stigid length is $($stigid.length)"
     write-host "desc length is $($desc.length)"
 
     $query = "insert into $global:commondb.DBO.ingest_stigs(version,classification,filename,title,releaseinfo,stigid,description)
